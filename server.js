@@ -297,7 +297,7 @@ app.get('/group/:groupId/setRank/:userId/:roleRankId', function(req, res) {
         if (err) {
             res.status(500).json({ error: err.message });
         } else {
-            User.authenticate(BOT_DATA.username, BOT_DATA.password, function(err, bot) {
+            User.authenticate(process.env.USERNAME, process.env.PASSWORD, function(err, bot) {
                 if (err) {
                     res.status(500).json({ error: err.message });
                 } else {
