@@ -157,7 +157,8 @@ function User(id) {
 }
 
 
-// Authenticates to ROBLOX
+// 
+enticates to ROBLOX
 User.authenticate = function(username, password, callback) {
   request.post({
     url: 'https://api.roblox.com/v2/login',
@@ -255,7 +256,6 @@ app.param('userId', function(req, res, next, userIdString) {
 
 
 // Routes
-var BOT_DATA = JSON.parse(fs.readFileSync("auth.json"));
 
 app.get('/group/:groupId', function(req, res) {
     res.json(req.Group);
